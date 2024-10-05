@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang='it'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='generator' content='{{ eleventy.generator }}'>
+    <meta property='og:title' content='{{title}}'>
+    <meta property='og:description' content='{{site.description}}'>
+    <link rel='stylesheet' href='{{ '/css/styles.css' | url }}'>
+    <title>{{ site.title }}</title>
+    <link
+      rel='icon'
+      href='{{ '/images/icon-144.png' | url }}'
+      type='image/png'
+    >
+    {% block header %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  </head>
+  <body>
+      <header class='pt-4'>
+        <div class='column grid grid-cols-2 gap-4 header-grid mb-4 grid-rows-[repeat(3,auto)] sm:grid-cols-[5fr_1fr_1fr_1fr] sm:grid-rows-[repeat(2,auto)]'>
+          <div class="col-span-2 sm:row-span-2 sm:col-span-1  sm:col-start-1">
+            {% if linkHome %}<a href='/' class='text-2xl font-bold'>{% endif %}
+            <div class='md:max-w-[300px]'>
+              <img src='/images/logo-simple.png' alt='Il logo del club'>
+            </div>
+            <h1 class='text-2xl md:text-4xl'>
+              {{ site.title }}
+            </h1>
+            {% if linkHome %}</a>{% endif %}
+            <p class='hidden md:block'>{{ site.subtitle }}</p>
+          </div>
+            <a
+              class="row-start-2 sm:row-start-1 sm:col-start-2"
+              href='http://www.fipsas.it/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <div class='max-w-[120px] mx-auto'>
+                <img
+                  class='header-static-image'
+                  src='/images/fipsaslogo.png'
+                  alt='FIPSAS logo'
+                  loading='eager'
+                  placeholder='none'
+                  width='{120}'
+                >
+              </div>
+            </a>
+            <a
+              class="row-start-2 sm:row-start-1 sm:col-start-3"
+              href='http://www.cmas.org/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <div class='max-w-[120px] mx-auto'>
+                <img
+                  class='header-static-image'
+                  src='/images/cmas.png'
+                  alt='CMAS logo'
+                  loading='eager'
+                  placeholder='none'
+                  width='{120}'
+                >
+              </div>
+            </a>
+          <div class='flex items-center space-x-4 sm:flex-col sm:space-x-0 col-span-2 sm:col-span-1 sm:col-start-4'>
+            <div class='font-sm'>Seguici su</div>
+            <div class='flex space-x-4'>
+              <a
+                href='https://www.facebook.com/clubsubnettuno'
+                target='_blank'
+                rel='noopener noreferrer'
+                class='text-blue-nettuno'
+              >
+                {% include 'icon_facebook.liquid' %}
+              </a>
+              <a
+                href='https://www.instagram.com/clubsubnettuno/'
+                target='_blank'
+                rel='noopener noreferrer'
+                class='text-blue-nettuno'
+              >
+                {% include 'icon_instagram.liquid' %}
+              </a>
+            </div>
+          </div>
+        </div>
+        {% include 'menu.liquid' %}
+        </header>
+      {% block hero %}
+        {% if hideHeaderImages != true %}
+          {% include 'hero.liquid' %}
+        {% endif %}
+      {% endblock %}
+      <main  class="min-h-screen md:flex">
+        <div  class="flex-1">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+      </main>
+         <footer  class="mt-4 bg-stone-800 py-8 text-white">
+      <div class="column">
+        <div  class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <h3  class="mb-4 text-xl">Sul sito</h3>
+            {% include 'footer-navigation.liquid' %}
+          </div>
+          <div>
+            <h3  class="mb-4 text-xl">Vieni a trovarci</h3>
+            <address  class="not-italic text-white">
+              Associazione Sportiva Dilettantistica
+              <br />
+              c/o piscina Stadio "Carmen Longo"
+              <br />
+              accesso da via dello Sport 6<br />
+              Bologna
+              <br />
+              tel. 
+              <a href="tel://051 6153552"  class="text-inherit underline">
+                051 6153552
+              </a>
+              <br />
+              C.F. 01596311207
+              <br />
+              P.IVA 2665601205
+            </address>
+          </div>
+          <div>
+            <h3  class="mb-4 text-xl">Seguici sui social</h3>
+            <div class='flex space-x-4'>
+              <a
+                href='https://www.facebook.com/clubsubnettuno'
+                target='_blank'
+                rel='noopener noreferrer'
+                class='text-white'
+              >
+                {% include 'icon_facebook.liquid' %}
+              </a>
+              <a
+                href='https://www.instagram.com/clubsubnettuno/'
+                target='_blank'
+                rel='noopener noreferrer'
+                class='text-white'
+              >
+                {% include 'icon_instagram.liquid' %}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div  class="my-4 text-sm">
+          &copy; Club Sub Nettuno - {{ site.curYear }}
+        </div>
+      </div>
+    </footer>
+    {% block footer %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<div class="mb-4">
+    <label
+    htmlFor="{{id}}"
+    class="mb-2 block text-sm font-medium text-gray-900"
+    >
+    {{label}}
+    </label>
+    <input
+    type="{{type}}"
+    name="{{name | default: id}}"
+    id="{{id}}"
+    class="block w-full rounded-md border border-gray-300 bg-white p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+    placeholder="{{placeholder}}"
+    required="{{required}}"
+    aria-required="{{required}}"
+    />
+</div>

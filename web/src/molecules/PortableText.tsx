@@ -7,7 +7,7 @@ import urlBuilder from '@sanity/image-url';
 const urlFor = (source) =>
   urlBuilder({
     dataset: 'production',
-    projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+    projectId: process.env.SANITY_PROJECT,
   }).image(source);
 
 const serializers = {

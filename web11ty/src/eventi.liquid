@@ -1,0 +1,28 @@
+---
+layout: layouts/base.liquid
+title: Eventi subnettuno.it
+linkHome: true
+---
+
+<div class="column">
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+
+    {% for evento in eventi %}
+
+
+ <article class="relative">
+      <div>
+            <img src="{{evento.locandina.url}}" alt="{{evento.alt}}" class="max-h-[600px] w-full object-contain"> 
+      </div>
+
+        <div className="mb-6 py-2">
+            <h2>{{ evento.title }} </h2>
+        </div>
+    </article>
+
+
+      
+    {% endfor %}
+
+    </div>
+</div>

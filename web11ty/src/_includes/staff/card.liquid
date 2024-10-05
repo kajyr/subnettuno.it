@@ -1,0 +1,18 @@
+<div>
+   <div class="mb-4">
+        <div class="flex h-[400px] items-center justify-items-center">
+
+                <img
+                src="{{person.image}}"
+                class="object-contain"
+                alt="Foto dell'istruttore"
+                />
+            
+        </div>
+    </div> 
+
+    <div class="mb-4 font-bold">{{person.name}}</div>
+    
+    <div class="text-md text-gray-600">
+        {{ person.bio | sanityToHTML }}        </div>
+</div>

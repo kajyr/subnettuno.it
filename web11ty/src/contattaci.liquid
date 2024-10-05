@@ -1,0 +1,34 @@
+---
+layout: layouts/base.liquid
+title: subnettuno.it
+linkHome: true
+---
+
+<div class="column">
+    {% include 'atoms/page-title.liquid' title: "Contattaci" %}
+    <form
+        data-netlify="true"
+        method="POST"
+        name="contact-form"
+        action="/contattaci-ok"
+      >
+        <input type="hidden" name="form-name" value="contact-form" />
+         {% include 'atoms/forms.text-input.liquid'  label:"Il tuo nome" id:"name" required: true  %}
+         {% include 'atoms/forms.text-input.liquid'  label:"La tua email" id:"email" type:"email" name:"_replyto" required: true  %}
+         {% include 'atoms/forms.text-input.liquid'  label:"Il tuo cellulare (dove possibile ti contatteremo su WhatsApp)" id:"cell" type:"tel" name:"cell"   %}
+         {% include 'atoms/forms.text-area.liquid'  label:"Il tuo messaggio" id:"messaggio" name:"messaggio"   %}       
+        <div class="my-4">
+          <button
+            class="bg-blue-nettuno rounded-md p-2 text-gray-50"
+            type="submit"
+          >
+            Invia
+          </button>
+        </div>
+        <p class="text-xs">
+          I dati inseriti saranno utilizzati e trattati nel rispetto del
+          regolamento UE2016/679.
+        </p>
+      </form>
+
+</div>

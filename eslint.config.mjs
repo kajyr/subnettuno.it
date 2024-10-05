@@ -51,10 +51,10 @@ export default [
       '@typescript-eslint/explicit-module-boundary-types': 0,
       '@typescript-eslint/no-explicit-any': 0,
       '@typescript-eslint/no-namespace': 0,
+      '@typescript-eslint/no-require-imports': 'warn',
       '@typescript-eslint/no-var-requires': 0,
       eqeqeq: ['error', 'smart'],
       'sort-keys-fix/sort-keys-fix': 'warn',
-      '@typescript-eslint/no-require-imports': 'warn',
     },
 
     settings: {
@@ -64,6 +64,12 @@ export default [
     },
   },
   {
-    ignores: ['**/node_modules', '**/public'],
+    ignores: [
+      '**/node_modules',
+      '**/public',
+      '**/.cache',
+      '**/dist',
+      '**/web/**',
+    ],
   },
 ];

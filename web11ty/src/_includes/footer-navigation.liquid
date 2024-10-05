@@ -1,0 +1,34 @@
+<ul>
+  <li>
+    <a class="text-white" href="/didattica">
+      Attività didattica
+    </a>
+  </li>
+  {% for page in navigation %}
+    <li>
+    <a class="text-white" href="/{{page.slug.current}}">
+    {{ page.title }}
+    </a>
+    </li>
+  {% endfor %}
+  <li>
+    <a class="text-white" href="/dove-siamo">
+      Dove siamo
+    </a>
+  </li>
+  <li>
+    <a class="text-white" href="/guide">
+      Guide
+    </a>
+  </li>
+  <li>
+    <a class="text-white" href="/staff">
+      Lo Staff
+    </a>
+  </li>
+  <li>
+    <a class="text-white" href="/contattaci">
+      Contattaci
+    </a>
+  </li>
+</ul>

@@ -1,6 +1,7 @@
 import { defineConfig } from 'sanity';
 import schemaTypes from './schemas/schema';
 import { deskTool } from 'sanity/desk';
+
 import {
   dashboardTool,
   projectUsersWidget,
@@ -62,7 +63,7 @@ export default defineConfig({
     }),
     media(),
   ],
-  projectId: '31d7d4ws',
+  projectId: process.env.SANITY_PROJECT,
   root: true,
   schema: {
     types: schemaTypes,

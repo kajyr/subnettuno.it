@@ -8,7 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GATSBY_SANITY_PROJECT_ID: ${{ secrets.GATSBY_SANITY_PROJECT_ID }}
+      SANITY_PROJECT: ${{ secrets.SANITY_PROJECT }}
+      SANITY_READ_TOKEN: ${{ secrets.SANITY_READ_TOKEN }}
       GATSBY_SANITY_DATASET: ${{ secrets.GATSBY_SANITY_DATASET }}
     steps:
       - uses: actions/checkout@v4
@@ -16,4 +17,4 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - run: npm ci
-      - run: npm run build -ws
+      - run: npm run build -w=studio -w=web11ty

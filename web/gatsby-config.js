@@ -13,7 +13,7 @@ module.exports = {
       options: {
         dataset: process.env.GATSBY_SANITY_DATASET,
         overlayDrafts: !isProd,
-        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        projectId: process.env.SANITY_PROJECT,
         token: process.env.SANITY_READ_TOKEN,
         watchMode: !isProd,
       },

@@ -17,7 +17,7 @@ export default function Corso({ data }) {
         <Body>
           <PortableText
             raw={_rawBody}
-            projectId={process.env.GATSBY_SANITY_PROJECT_ID}
+            projectId={process.env.SANITY_PROJECT}
             dataset="production"
           />
           <div>

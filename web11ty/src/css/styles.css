@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html {
+  @apply text-base;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @apply text-gray-800;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0;
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-3xl;
+  @apply font-semibold;
+}
+
+h2 {
+  @apply text-2xl;
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  @apply text-slate-700;
+  text-decoration: none;
+}
+
+a:hover {
+  @apply text-blue-nettuno;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid #eaecef;
+}
+
+.column {
+  @apply mx-auto my-0 w-10/12 max-w-6xl;
+}
+
+/* Nav menu */
+
+.nav-menu-item {
+  @apply hover:text-blue-nettuno px-4 py-4 text-white hover:bg-white;
+}
+
+.nav-menu-item.active {
+  @apply font-bold;
+}
+
+.nav-menu-item.menu-open {
+  @apply text-blue-nettuno bg-white;
+}
+
+.focus-bar-box {
+  @apply bg-blue-nettuno h-[200px] w-[280px] bg-cover bg-center bg-no-repeat text-center;
+}
+
+.focus-bar-box:first-child {
+  @apply rounded-l-lg;
+}
+.focus-bar-box:last-child {
+  @apply rounded-r-lg;
+}
+
+.header-grid {
+}

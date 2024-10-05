@@ -1,0 +1,53 @@
+---
+layout: layouts/base.liquid
+linkHome: true
+---
+
+<div class="column">
+<h2 class="m-4">Il consiglio</h2>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {% for person in staff.council %}
+        {% include 'staff/card.liquid' person: person %}
+    {% endfor %}
+</div>
+<h2 class="m-4">Gli istruttori</h2>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {% for person in staff.istr %}   {% comment %}  <PersonCard key={person.id} data={person} /> {% endcomment %}
+        {% include 'staff/card.liquid' person: person %}
+    {% endfor %}
+</div>
+<p class="mx-4 my-8">
+I nostri corsi non sarebbero comunque possibili senza l’aiuto di 
+{{staff.aiuti}} e tutti i soci impegnati nel percorso formativo per
+diventare i futuri istruttori del Club Sub Nettuno.
+</p>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}  <article class="relative">
+      <div>
+            <img src="{{staff.locandina.url}}" alt="{{staff.alt}}" class="max-h-[600px] w-full object-contain"> 
+      </div>
+
+        <div class="mb-6 py-2">
+            <h2>{{ staff.title }} </h2>
+        </div>
+    </article>
+ {% endcomment %}
+
+      
+    
+
+    </div>
+</div>

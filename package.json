@@ -29,6 +29,7 @@
   },
   "workspaces": [
     "web",
+    "web11ty",
     "studio"
   ]
 }

@@ -1,0 +1,36 @@
+---
+layout: layouts/base.liquid
+title: subnettuno.it
+linkHome: true
+hideHeaderImages: true
+---
+
+{% block header %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+{% endblock %}
+
+{% block hero %}
+  <div id="map" class="map-element mb-4 h-[600px] w-full"></div>
+{% endblock %}
+
+
+{% block content %}
+ <div class="column">
+    {% include 'atoms/page-title.liquid' title: "Dove siamo" %}
+    <p>
+      Il club ha la sede presso la piscina Carmen Longo, all&apos;interno
+      del complesso dello Stadio Comunale Dall&apos;Ara di Bologna
+    </p>
+    <address class="block not-italic">
+      Via Costa Andrea, 174
+      <br />
+      40134 Bologna (BO)
+    </address>
+    <p>
+      Per accedere alla piscina usare l&apos;ingresso pedonale che si trova
+      in via dello Sport 6
+    </p>
+  </div>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="/js/leaflet-map.js"></script>
+{% endblock %}

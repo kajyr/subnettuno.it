@@ -1,0 +1,11 @@
+<div class="mb-6">
+    <swiper-container>
+    {% for image in site.headerImages %}
+        <swiper-slide>
+        <div class="h-[500px] w-full">
+            <img src="{{image}}" alt="" class="h-full w-full object-cover">
+        </div>
+        </swiper-slide>
+    {% endfor %}
+  </swiper-container>
+</div>
